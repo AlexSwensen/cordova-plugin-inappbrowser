@@ -527,12 +527,14 @@
 
     float toolbarY = toolbarIsAtBottom ? self.view.bounds.size.height - TOOLBAR_HEIGHT : 0.0;
     CGRect toolbarFrame = CGRectMake(0.0, toolbarY, self.view.bounds.size.width, TOOLBAR_HEIGHT);
-
     self.toolbar = [[UIToolbar alloc] initWithFrame:toolbarFrame];
     self.toolbar.alpha = 1.000;
     self.toolbar.autoresizesSubviews = YES;
     self.toolbar.autoresizingMask = toolbarIsAtBottom ? (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin) : UIViewAutoresizingFlexibleWidth;
-    self.toolbar.barStyle = UIBarStyleBlackOpaque;
+    self.toolbar.barStyle = UIBarStyleBlack;
+    self.toolbar.tintColor = [UIColor colorWithRed: 255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1];
+    self.toolbar.barTintColor = [UIColor colorWithRed: 68.0 / 255 green: 182.0 / 255.0 blue:89.0 / 255.0 alpha:1];
+    self.toolbar.translucent = NO;
     self.toolbar.clearsContextBeforeDrawing = NO;
     self.toolbar.clipsToBounds = NO;
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
@@ -603,7 +605,7 @@
     self.closeButton = nil;
     self.closeButton = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleBordered target:self action:@selector(close)];
     self.closeButton.enabled = YES;
-    self.closeButton.tintColor = [UIColor colorWithRed:60.0 / 255.0 green:136.0 / 255.0 blue:230.0 / 255.0 alpha:1];
+    self.closeButton.tintColor = [UIColor colorWithRed:255.0 / 255.0 green:255.0 / 255.0 blue:255.0 / 255.0 alpha:1];
 
     NSMutableArray* items = [self.toolbar.items mutableCopy];
     [items replaceObjectAtIndex:0 withObject:self.closeButton];
@@ -736,7 +738,7 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)close
@@ -983,6 +985,8 @@
 
     UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:frame];
     bgToolbar.barStyle = UIBarStyleDefault;
+    bgToolbar.translucent = NO;
+    bgToolbar.barTintColor = [UIColor colorWithRed: 68.0 / 255.0 green:182.0 / 255.0 blue:89.0 / 255.0 alpha:1];
     [self.view addSubview:bgToolbar];
 
     [super viewDidLoad];
