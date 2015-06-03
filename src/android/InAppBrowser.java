@@ -593,7 +593,7 @@ public class InAppBrowser extends CordovaPlugin {
                  }*/
                 back.setTypeface(font);
                 back.setText("");
-                back.setTextColor(android.graphics.Color.parseColor("#75f78d"));
+                back.setTextColor(android.graphics.Color.parseColor("#FFFFFF"));
                 back.setTextSize(TypedValue.COMPLEX_UNIT_PT,14);
                 back.setPadding(22, 2, 15,5);
                 back.setGravity(Gravity.CENTER_VERTICAL);
@@ -616,7 +616,7 @@ public class InAppBrowser extends CordovaPlugin {
                 
                 forward.setTypeface(font);
                 forward.setText("");
-                forward.setTextColor(android.graphics.Color.parseColor("#75f78d"));
+                forward.setTextColor(android.graphics.Color.parseColor("#FFFFFF"));
                 forward.setTextSize(TypedValue.COMPLEX_UNIT_PT,14);
                 forward.setPadding(22, 2, 15,5);
                 forward.setGravity(Gravity.CENTER_VERTICAL);
@@ -775,7 +775,7 @@ public class InAppBrowser extends CordovaPlugin {
                 reloadLayoutParams.addRule(RelativeLayout.RIGHT_OF, forward.getId());
                 reload.setTypeface(font);
                 reload.setText("");
-                reload.setTextColor(android.graphics.Color.parseColor("#75f78d"));
+                reload.setTextColor(android.graphics.Color.parseColor("#FFFFFF"));
                 reload.setTextSize(TypedValue.COMPLEX_UNIT_PT,14);
                 reload.setPadding(22, 2, 15,5);
                 reload.setGravity(Gravity.CENTER_VERTICAL);
